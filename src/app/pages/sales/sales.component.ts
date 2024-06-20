@@ -4,11 +4,12 @@ import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SalesCarPopupComponent } from '../../components/sales-car-popup/sales-car-popup.component';
+import { AddCarFormPopupComponent } from '../../components/add-car-form-popup/add-car-form-popup.component';
 
 @Component({
   selector: 'app-sales',
   standalone: true,
-  imports: [HeaderComponent,RouterOutlet, CommonModule,FormsModule,SalesCarPopupComponent],
+  imports: [HeaderComponent,RouterOutlet, CommonModule,FormsModule,SalesCarPopupComponent,AddCarFormPopupComponent],
   templateUrl: './sales.component.html',
   styleUrl: './sales.component.css'
 })
@@ -116,6 +117,23 @@ export class SalesComponent {
       // Ajoutez ici la logique pour accepter ou refuser la voiture
     }
     this.popupVisible = false;
+  }
+
+
+
+  createCarPopupVisible = false;
+
+  showCreatePopup() {
+    this.createCarPopupVisible = true;
+  }
+
+  onCarAdded(newCar: any) {
+    this.cars.push(newCar);
+    this.createCarPopupVisible = false;
+  }
+
+  onCancelCreate() {
+    this.createCarPopupVisible = false;
   }
 
 }

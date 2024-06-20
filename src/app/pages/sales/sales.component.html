@@ -72,7 +72,7 @@
     <div class="table">
         <div style="display: flex;">
             <h3 style="width: 90%;">Voitures</h3>
-            <button class="button-create-car">+</button>
+            <button class="button-create-car" (click)="showCreatePopup()">+</button>
         </div>
         
         <table>
@@ -107,4 +107,10 @@
     [action]="popupAction"
     (confirmed)="onPopupConfirmed($event)"
   ></app-sales-car-popup>
+
+  <app-add-car-form-popup
+  [isVisible]="createCarPopupVisible"
+  (carAdded)="onCarAdded($event)"
+  (cancelled)="onCancelCreate()"
+></app-add-car-form-popup>
 </div>
