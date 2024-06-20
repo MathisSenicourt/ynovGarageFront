@@ -95,6 +95,32 @@ th {
     border-radius: 2em;
 }
 
+.sales-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .sales-header h2 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .sales-header .add-button {
+    background-color: #EB8AFA;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .sales-header .add-button:hover {
+    background-color: #C75FC3;
+  }
+
 .accept-button {
     background-color: #9AFA8A;
     border: none;

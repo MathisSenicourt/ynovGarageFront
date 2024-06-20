@@ -1,0 +1,37 @@
+<app-header></app-header>
+<router-outlet></router-outlet>
+
+<div class="workshop-header">
+    <h2>Atelier</h2>
+    <button class="add-button" (click)="showAddCarWorkshopPopup()">+</button>
+  </div>
+  
+  <div class="workshop-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Voiture</th>
+          <th>Type de Réparation</th>
+          <th>Emplacement</th>
+          <th>Garagiste</th>
+          <th>Propriétaire</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of workshopItems">
+          <td>{{ item.car }}</td>
+          <td>{{ item.repairType }}</td>
+          <td>{{ item.location }}</td>
+          <td>{{ item.mechanic }}</td>
+          <td>{{ item.owner }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+
+  <app-add-car-workshop-popup
+  [isVisible]="addCarWorkshopPopupVisible"
+  (carAdded)="onCarAdded($event)"
+  (cancelled)="onCancelCreate()"
+></app-add-car-workshop-popup>
