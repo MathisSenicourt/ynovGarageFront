@@ -90,7 +90,7 @@ export class ShowroomComponent implements OnInit {
     console.log(`Année Max: ${this.yearMaxValue}`);
   }
 
-  viewDetails(car: any) {
-    console.log('Voir détails de la voiture', car);
+  bookCar(carId: any) {
+    this.carsService.bookAppointment(carId)
   }
 }

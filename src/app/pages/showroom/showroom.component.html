@@ -75,7 +75,7 @@
                         <div>{{ car.marque }} - {{ car.annee }} - {{ car.kilometrage }} km</div>
                     </td>
                     <td>{{ car.prix }}€</td>
-                    <td><button class="custom-button" (click)="viewDetails(car)"></button></td>
+                    <td><button class="custom-button" (click)="bookCar(car.id)"></button></td>
                 </tr>
             </tbody>
         </table>

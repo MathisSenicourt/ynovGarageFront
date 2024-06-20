@@ -13,4 +13,14 @@ export class CarsService {
   getAllCars() {
     return this.http.get<any[]>('http://localhost:3000/cars/');
   }
+
+  bookAppointment(carsId: any) {
+    const requestBody = {
+      voiture_id: carsId,
+      type: 'essai'
+    };
+    console.log(requestBody);
+    return this.http.post<any>('http://localhost:3000/cars/appointmentt', requestBody);
+  }
+
 }
