@@ -1,0 +1,8 @@
+<div class="popup-background" *ngIf="isVisible">
+    <div class="popup">
+      <h2>Confirmation</h2>
+      <p>Êtes-vous sûr de vouloir {{ action }} cette voiture ?</p>
+      <button (click)="confirm()">Confirmer</button>
+      <button (click)="cancel()">Annuler</button>
+    </div>
+  </div>
