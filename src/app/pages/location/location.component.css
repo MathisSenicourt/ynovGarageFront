@@ -1,0 +1,47 @@
+.location-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .occupied-locations, .empty-locations {
+    width: 45%;
+  }
+  
+  .location-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .location-list th, .location-list td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .location-list th {
+    background-color: #f2f2f2;
+  }
+  
+  .location-list td button {
+    padding: 6px 12px;
+    border: none;
+    background-color: #EB8AFA;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .location-list td button:hover {
+    background-color: #EB8AFA;
+  }
+  
+  .location-list h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+  }
+  

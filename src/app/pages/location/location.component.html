@@ -1,0 +1,41 @@
+<app-header></app-header>
+<router-outlet></router-outlet>
+<div class="location-list">
+    <div class="occupied-locations">
+      <h3>Emplacements Occupés</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Nom de l'Emplacement</th>
+            <th>Voiture</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let location of occupiedLocations">
+            <td>{{ location.name }}</td>
+            <td>{{ location.car.model }} - {{ location.car.brand }}</td>
+            <td><button (click)="showDetails(location.car)">Détails</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div class="empty-locations">
+      <h3>Emplacements Vides</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Nom de l'Emplacement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let location of emptyLocations">
+            <td>{{ location.name }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+</div>
+  
