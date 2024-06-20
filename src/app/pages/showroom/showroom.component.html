@@ -15,13 +15,13 @@
             <h4>Prix</h4>
             <label>
                 Min: {{ this.priceMin }}€
-                <input type="range" min="0" max="100000" [(ngModel)]="this.priceMin" (input)="onPriceChange()"> 
-                
+                <input type="range" min="0" max="100000" [(ngModel)]="this.priceMin" (input)="onPriceChange()">
+
             </label>
             <label>
                 Max: {{ this.priceMax }}€
-                <input type="range" min="0" max="100000" [(ngModel)]="this.priceMax" (input)="onPriceChange()"> 
-                
+                <input type="range" min="0" max="100000" [(ngModel)]="this.priceMax" (input)="onPriceChange()">
+
             </label>
         </div>
 
@@ -31,13 +31,13 @@
             <h4>km</h4>
             <label>
                 Min: {{ kmMin }} km
-                <input type="range" min="0" max="1000" [(ngModel)]="kmMin" (input)="onKmChange()"> 
-                
+                <input type="range" min="0" max="1000" [(ngModel)]="kmMin" (input)="onKmChange()">
+
             </label>
             <label>
                 Max: {{ kmMax }} km
-                <input type="range" min="0" max="1000" [(ngModel)]="kmMax" (input)="onKmChange()"> 
-                
+                <input type="range" min="0" max="1000" [(ngModel)]="kmMax" (input)="onKmChange()">
+
             </label>
         </div>
 
@@ -47,17 +47,17 @@
             <h4>Année</h4>
             <label>
                 Min: {{ yearMinValue }}
-                <input type="range" [min]="yearMin" [max]="yearMax" [(ngModel)]="yearMinValue" (input)="onYearChange()"> 
-                
+                <input type="range" [min]="yearMin" [max]="yearMax" [(ngModel)]="yearMinValue" (input)="onYearChange()">
+
             </label>
             <label>
                 Max: {{ yearMaxValue }}
-                <input type="range" [min]="yearMin" [max]="yearMax" [(ngModel)]="yearMaxValue" (input)="onYearChange()"> 
-                
+                <input type="range" [min]="yearMin" [max]="yearMax" [(ngModel)]="yearMaxValue" (input)="onYearChange()">
+
             </label>
         </div>
     </div>
-    
+
     <div class="table">
         <h3>Voitures</h3>
         <table>
@@ -71,13 +71,13 @@
             <tbody>
                 <tr *ngFor="let car of cars">
                     <td>
-                        <h2>{{ car.model }}</h2>
-                        <div>{{ car.brand }} - {{ car.year }} - {{ car.km }} km</div>
+                        <h2>{{ car.modele }}</h2>
+                        <div>{{ car.marque }} - {{ car.annee }} - {{ car.kilometrage }} km</div>
                     </td>
-                    <td>{{ car.price }}€</td>
+                    <td>{{ car.prix }}€</td>
                     <td><button class="custom-button" (click)="viewDetails(car)"></button></td>
                 </tr>
             </tbody>
         </table>
-    </div>      
+    </div>
 </div>
