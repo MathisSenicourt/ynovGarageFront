@@ -1,14 +1,14 @@
 import {Component, OnInit} from '@angular/core';
-import { HeaderComponent } from '../../components/header/header.component';
-import { RouterOutlet } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import {HeaderComponent} from '../../components/header/header.component';
+import {RouterOutlet} from '@angular/router';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
 import {CarsService} from "../../services/cars.service";
 
 @Component({
   selector: 'app-showroom',
   standalone: true,
-  imports: [HeaderComponent, RouterOutlet, CommonModule,FormsModule],
+  imports: [HeaderComponent, RouterOutlet, CommonModule, FormsModule],
   templateUrl: './showroom.component.html',
   styleUrl: './showroom.component.css'
 })
@@ -16,7 +16,8 @@ export class ShowroomComponent implements OnInit {
 
   constructor(
     private carsService: CarsService,
-  ) {}
+  ) {
+  }
 
   brands: string[] = ['Toyota', 'Honda', 'Ford', 'BMW', 'Audi'];
   selectedBrands: string[] = [];
@@ -91,6 +92,9 @@ export class ShowroomComponent implements OnInit {
   }
 
   bookCar(carId: any) {
-    this.carsService.bookAppointment(carId)
+    this.carsService.bookAppointment(carId).subscribe(
+      response => console.log('Appointment booked successfully:', response),
+      error => console.error('Error booking appointment:', error)
+    );
   }
 }

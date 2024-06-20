@@ -20,7 +20,7 @@ export class CarsService {
       type: 'essai'
     };
     console.log(requestBody);
-    return this.http.post<any>('http://localhost:3000/cars/appointmentt', requestBody);
+    return this.http.post<any>('http://localhost:3000/cars/appointment', requestBody);
   }
 
 }
