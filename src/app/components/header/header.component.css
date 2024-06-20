@@ -1,25 +1,25 @@
-nav {
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     background-color: #EB8AFA;
     color: white;
     padding: 1em;
   }
   
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    display: inline;
-    margin-right: 1em;
-  }
-  
-  a {
+  .navigation button {
+    background: none;
+    border: none;
     color: white;
-    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
   }
   
-  a.active {
+  .navigation button:hover {
+    text-decoration: underline;
+  }
+  
+  .navigation button.routerLinkActive {
     font-weight: bold;
   }
   
